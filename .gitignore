@@ -1,3 +1,16 @@
-faiss_indexs/
+# Environments
 .env
-src/media/pdfs/2026/
+venv/
+
+# Media & Uploads
+src/media/
+
+# FAISS Indexes
+src/faiss_indexes/
+
+# Database
+db.sqlite3
+
+# Python Cache
+__pycache__/
+*.pyc
