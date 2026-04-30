@@ -1,0 +1,11 @@
+django
+django-allauth[socialaccount]
+python-decouple
+langchain
+langchain-core
+langchain-community
+langchain-google-genai
+faiss-cpu
+pypdf
+tiktoken
+slippers

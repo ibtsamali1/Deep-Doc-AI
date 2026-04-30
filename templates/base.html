@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Deep Doc Ai - RAG System{% endblock %}</title>
+    <!-- We still load the allauth-ui tailwind if we are in allauth pages, but for our own base we use styles.css -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    {% include "navbar.html" %}
+
+    <div class="page-wrapper">
+        {% if messages %}
+            <div style="width: 100%; margin-bottom: 1rem;">
+                {% for message in messages %}
+                    <div style="padding: 1rem; border-radius: var(--radius); margin-bottom: 0.5rem; background-color: #e0f2fe; color: #0369a1;">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    {% block extra_body %}{% endblock %}
+</body>
+</html>

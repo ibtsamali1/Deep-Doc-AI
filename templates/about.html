@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}About - Deep Doc Ai{% endblock %}
+
+{% block content %}
+<div class="app-card" style="max-width: 800px; margin: 2rem auto;">
+    <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-main); letter-spacing: -0.025em;">About Deep Doc Ai</h1>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; color: var(--text-muted);">
+        Welcome to <strong>Deep Doc Ai</strong>, your personal AI-powered assistant for reading, analyzing, and chatting with your PDF documents.
+    </p>
+
+    <h2 style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: var(--text-main); letter-spacing: -0.01em;">Our Mission</h2>
+    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; color: var(--text-muted);">
+        We built Deep Doc Ai to solve a simple problem: too much reading, not enough time. Whether you're a student dealing with massive textbooks, a researcher combing through dense papers, or a professional reviewing lengthy contracts, our tool uses state-of-the-art AI to help you find the information you need, instantly.
+    </p>
+
+    <h2 style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: var(--text-main); letter-spacing: -0.01em;">How It Works</h2>
+    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; color: var(--text-muted);">
+        When you upload a PDF, we securely extract its text, break it down into manageable chunks, and generate deep semantic representations (embeddings). Then, when you ask a question, our Retrieval-Augmented Generation (RAG) engine scans your document to find the most relevant sections and uses an advanced Large Language Model to formulate a precise, contextual answer based <em>only</em> on your file.
+    </p>
+
+    <div style="margin-top: 3rem; text-align: center;">
+        <a href="{% url 'home' %}" class="app-btn">Start Chatting Now</a>
+    </div>
+</div>
+{% endblock %}

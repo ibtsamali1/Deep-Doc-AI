@@ -1,0 +1,23 @@
+<nav class="navbar">
+    <div class="navbar-brand">
+        <a href="{% url 'home' %}">Deep Doc AI</a>
+    </div>
+    <div class="navbar-nav">
+        <a href="{% url 'home' %}" class="nav-link">Home</a>
+        <!-- Using hash links for single page app style layout, or assuming they might be added later -->
+        <a href="{% url 'home' %}#upload" class="nav-link">Upload</a>
+        <a href="{% url 'pricing' %}" class="nav-link">Pricing</a>
+        <a href="{% url 'about' %}" class="nav-link">About</a>
+        
+        {% if user.is_authenticated %}
+            <span class="nav-link" style="color: var(--text-muted);">Hi, {{ user.username }}</span>
+            <form method="post" action="{% url 'account_logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="nav-link app-btn" style="margin-top: 0; padding: 0.5rem 1rem;">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'account_login' %}" class="nav-link">Sign In</a>
+            <a href="{% url 'account_signup' %}" class="nav-link app-btn" style="margin-top: 0;">Sign Up</a>
+        {% endif %}
+    </div>
+</nav>

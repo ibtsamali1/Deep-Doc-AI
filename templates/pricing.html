@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}Pricing - Deep Doc Ai{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>Simple, Transparent Pricing</h1>
+    <p style="color: var(--text-muted); font-size: 1.1rem;">Choose the plan that fits your document processing needs.</p>
+</div>
+
+<div class="pricing-container">
+    <!-- Basic Plan -->
+    <div class="pricing-card">
+        <h3>Basic</h3>
+        <div class="price">Free</div>
+        <p class="desc">Perfect for trying out the platform and light usage.</p>
+        <ul class="features">
+            <li>✓ Up to 5 PDFs per month</li>
+            <li>✓ Max 10 pages per PDF</li>
+            <li>✓ Standard response time</li>
+            <li>✓ Community support</li>
+        </ul>
+        <a href="{% url 'account_signup' %}" class="app-btn pricing-btn outline">Get Started</a>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="pricing-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <h3>Pro</h3>
+        <div class="price">$9<span>/mo</span></div>
+        <p class="desc">For students and professionals who need more power.</p>
+        <ul class="features">
+            <li>✓ Up to 50 PDFs per month</li>
+            <li>✓ Max 100 pages per PDF</li>
+            <li>✓ Faster response time</li>
+            <li>✓ Priority email support</li>
+            <li>✓ Citation tracking</li>
+        </ul>
+        <a href="{% url 'account_signup' %}" class="app-btn pricing-btn" style="background: var(--gradient-primary);">Upgrade to Pro</a>
+    </div>
+
+    <!-- Advanced Plan -->
+    <div class="pricing-card">
+        <h3>Advanced</h3>
+        <div class="price">$29<span>/mo</span></div>
+        <p class="desc">For power users and researchers dealing with massive documents.</p>
+        <ul class="features">
+            <li>✓ Unlimited PDFs</li>
+            <li>✓ Unlimited pages</li>
+            <li>✓ Lightning fast responses</li>
+            <li>✓ 24/7 dedicated support</li>
+            <li>✓ API Access</li>
+            <li>✓ Advanced analytics</li>
+        </ul>
+        <a href="{% url 'account_signup' %}" class="app-btn pricing-btn outline">Contact Sales</a>
+    </div>
+</div>
+
+<style>
+    .pricing-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 1000px;
+        margin: 2rem auto;
+    }
+
+    .pricing-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .pricing-card.popular {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 2px var(--primary), 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
+
+    .pricing-card.popular:hover {
+        box-shadow: 0 0 0 2px var(--primary), 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    }
+
+    .popular-badge {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--gradient-primary);
+        color: white;
+        padding: 0.25rem 1.25rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        box-shadow: 0 4px 6px -1px rgb(37 99 235 / 0.3);
+    }
+
+    .pricing-card h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-main);
+    }
+
+    .price {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--text-main);
+        margin-bottom: 1rem;
+        letter-spacing: -0.025em;
+    }
+
+    .price span {
+        font-size: 1.15rem;
+        color: var(--text-muted);
+        font-weight: 500;
+    }
+
+    .desc {
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+        min-height: 3rem;
+        line-height: 1.5;
+    }
+
+    .features {
+        list-style: none;
+        margin-bottom: 2.5rem;
+        flex: 1;
+    }
+
+    .features li {
+        margin-bottom: 1rem;
+        color: var(--text-main);
+        font-size: 0.95rem;
+    }
+
+    .pricing-btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.875rem;
+        font-size: 1.05rem;
+        border-radius: 8px;
+    }
+
+    .pricing-btn.outline {
+        background: transparent;
+        border: 1px solid var(--border);
+        color: var(--text-main);
+        box-shadow: none;
+    }
+
+    .pricing-btn.outline:hover {
+        background: #f1f5f9;
+        border-color: #cbd5e1;
+        color: var(--text-main);
+    }
+</style>
+{% endblock %}
