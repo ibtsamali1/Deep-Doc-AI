@@ -9,3 +9,5 @@ faiss-cpu
 pypdf
 tiktoken
 slippers
+dj_database_url
+psycopg[binary]
