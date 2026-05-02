@@ -43,12 +43,7 @@ Answer:"""
 
 
 class RAGEngine:
-    """
-    Per-user RAG engine with FAISS persistence.
-
-    Each user gets an isolated FAISS index directory so their documents
-    are completely separate from other users.
-    """
+   
 
     def __init__(self, user_id: int):
         self.user_id = user_id
