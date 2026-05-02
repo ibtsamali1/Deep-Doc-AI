@@ -127,6 +127,9 @@ TEMPLATES = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://deep-doc-ai-production.up.railway.app",
+]
 
 AUTHENTICATION_BACKENDS = [
 
