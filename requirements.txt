@@ -12,3 +12,5 @@ slippers
 dj_database_url
 psycopg[binary]
 gunicorn
+
+
