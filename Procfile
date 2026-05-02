@@ -1,2 +1,2 @@
 
-web: gunicorn chat_rag.wsgi:application --bind 0.0.0.0:$PORT
+web: gunicorn src.chat_rag.wsgi:application --bind 0.0.0.0:$PORT
