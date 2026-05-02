@@ -15,7 +15,7 @@ gunicorn
 # slippers
 # allauth_ui
 # widget_tweaks
-
+whitenoise
 django-allauth-ui
 django-widget-tweaks
 slippers
