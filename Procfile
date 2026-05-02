@@ -1,1 +1,1 @@
-web: cd src && gunicorn chat_rag.wsgi:application --bind 0.0.0.0:$PORT
+gunicorn source.chat_rag.wsgi:application --bind 0.0.0.0:$PORT
