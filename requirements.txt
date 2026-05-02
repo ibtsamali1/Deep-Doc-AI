@@ -12,5 +12,10 @@ slippers
 dj_database_url
 psycopg[binary]
 gunicorn
+# slippers
+# allauth_ui
+# widget_tweaks
 
-
+django-allauth-ui
+django-widget-tweaks
+slippers
