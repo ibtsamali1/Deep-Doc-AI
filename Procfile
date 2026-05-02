@@ -1,0 +1,1 @@
+web: cd src && gunicorn chat_rag.wsgi
